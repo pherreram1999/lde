@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/LDE.dir/main.cpp.o -o LDE 
