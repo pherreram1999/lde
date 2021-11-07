@@ -81,12 +81,12 @@ clean: CMakeFiles/LDE.dir/clean
 CMakeFiles/LDE.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LDE.dir/build.make CMakeFiles/LDE.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LDE.dir/build.make CMakeFiles/LDE.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sistemas/CLionProjects/LDE/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target LDE"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sistemas/CLionProjects/LDE/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target LDE"
 .PHONY : CMakeFiles/LDE.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/LDE.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sistemas/CLionProjects/LDE/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sistemas/CLionProjects/LDE/cmake-build-debug/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/LDE.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sistemas/CLionProjects/LDE/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/LDE.dir/rule

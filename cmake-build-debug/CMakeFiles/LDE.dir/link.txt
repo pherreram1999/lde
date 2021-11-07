@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/LDE.dir/main.cpp.o -o LDE 
+/usr/bin/c++ -g CMakeFiles/LDE.dir/main.cpp.o CMakeFiles/LDE.dir/operaciones.cpp.o -o LDE 

@@ -153,6 +153,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LDE.dir/build.make CMakeFiles/LDE.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+operaciones.o: operaciones.cpp.o
+.PHONY : operaciones.o
+
+# target to build an object file
+operaciones.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LDE.dir/build.make CMakeFiles/LDE.dir/operaciones.cpp.o
+.PHONY : operaciones.cpp.o
+
+operaciones.i: operaciones.cpp.i
+.PHONY : operaciones.i
+
+# target to preprocess a source file
+operaciones.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LDE.dir/build.make CMakeFiles/LDE.dir/operaciones.cpp.i
+.PHONY : operaciones.cpp.i
+
+operaciones.s: operaciones.cpp.s
+.PHONY : operaciones.s
+
+# target to generate assembly for a file
+operaciones.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LDE.dir/build.make CMakeFiles/LDE.dir/operaciones.cpp.s
+.PHONY : operaciones.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... operaciones.o"
+	@echo "... operaciones.i"
+	@echo "... operaciones.s"
 .PHONY : help
 
 

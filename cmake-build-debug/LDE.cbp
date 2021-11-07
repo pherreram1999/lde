@@ -82,7 +82,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/sistemas/CLionProjects/LDE/header.h">
+			<Option target="LDE"/>
+		</Unit>
 		<Unit filename="/home/sistemas/CLionProjects/LDE/main.cpp">
+			<Option target="LDE"/>
+		</Unit>
+		<Unit filename="/home/sistemas/CLionProjects/LDE/operaciones.cpp">
 			<Option target="LDE"/>
 		</Unit>
 		<Unit filename="/home/sistemas/CLionProjects/LDE/CMakeLists.txt">

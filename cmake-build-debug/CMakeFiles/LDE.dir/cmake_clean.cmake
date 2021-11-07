@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/LDE.dir/main.cpp.o"
+  "CMakeFiles/LDE.dir/operaciones.cpp.o"
   "LDE"
   "LDE.pdb"
 )

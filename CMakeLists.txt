@@ -3,4 +3,4 @@ project(LDE)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(LDE main.cpp)
+add_executable(LDE main.cpp header.h operaciones.cpp)
