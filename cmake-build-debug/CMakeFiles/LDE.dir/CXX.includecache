@@ -9,14 +9,12 @@
 /home/sistemas/CLionProjects/LDE/header.h
 iostream
 -
-stdlib.h
+cstdlib
 -
-time.h
+ctime
 -
 
-/home/sistemas/CLionProjects/LDE/operaciones.cpp
-utility
--
+/home/sistemas/CLionProjects/LDE/main.cpp
 header.h
 /home/sistemas/CLionProjects/LDE/header.h
 

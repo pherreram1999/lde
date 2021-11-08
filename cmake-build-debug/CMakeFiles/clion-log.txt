@@ -1,4 +1,4 @@
-/home/sistemas/Apps/Clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/sistemas/CLionProjects/LDE
+/home/sistemas/Descargas/Clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/sistemas/CLionProjects/LDE
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/sistemas/CLionProjects/LDE/cmake-build-debug

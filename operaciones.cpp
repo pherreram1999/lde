@@ -93,3 +93,135 @@ int cantidad(Nodo * nav){
     }
     return counter;
 }
+
+/**
+ * Iprime los valores del nodo y el videojuego
+ * @param nodo = el apuntador del nodo a imprimir
+ */
+void imprimirNodo(Nodo * nodo){
+    cout << "--- Nodo con ID " << nodo->id << " ---" << endl;
+    cout << "Titulo: " << nodo->vg.titulo << endl;
+    cout << "Genero: " << nodo->vg.genero << endl;
+    cout << "Clasificacion: " << nodo->vg.clasificacion << endl;
+    cout << "---------------------" << endl;
+}
+
+/**
+ * muestra todos los nodos de la lista y sus caracteristicas
+ * @param nav = el apuntador de la lista
+ */
+void mostrarLista(Nodo * nav){
+    if(nav == nullptr)
+        cout << "Lista vacia :O" << endl;
+
+    while(nav != nullptr){
+        imprimirNodo(nav);
+        nav = nav->sig;
+    }
+}
+
+/**
+ * Busca en la lista el nodo dado por un id
+ * @param nav = apuntador de la lista donde se busca
+ * @param id = identificador del nodo a buscar
+ * @return
+ */
+Nodo * buscarNodo(Nodo * nav,int id){
+    while(nav != nullptr){
+        if(nav->id == id)
+            return nav;
+        nav = nav->sig;
+    }
+    return nullptr;
+}
+
+/**
+ * Asgina el valor de genero del videojuego del nodo
+ * @param nodo = nodo a editar
+ * @param genero = nuevo genero
+ */
+void setGenero(Nodo * nodo,string genero){
+    nodo->vg.genero = move(genero);
+}
+
+/**
+ * Asigna el valor de titulo del videojuego del nodo
+ * @param nodo = nodo a editar
+ * @param titulo = nuevo titulo
+ */
+void setTitulo(Nodo * nodo,string titulo){
+    nodo->vg.titulo = move(titulo);
+}
+
+/**
+ * Asigna el valor de clasificacion del videojuego del nodo
+ * @param nodo = nodo a editar
+ * @param clasificacion = nueva clasificacion
+ */
+void setClasificacion(Nodo * nodo,string clasificacion){
+    nodo->vg.clasificacion = move(clasificacion);
+}
+
+/**
+ * Borra el nodo de una lista dado por su id
+ * @param lista = lista donde se encuentra el nodo
+ * @param id = identificador del nodo a borrar
+ * @return
+ */
+bool borrarNodo(Nodo ** lista,int id){
+    // si no tiene elementos
+    if(*lista == nullptr)
+        return false;
+    Nodo * nav = *lista;
+    // si tiene mas elementos buscamos el nodo
+    while(nav != nullptr && nav->id != id){
+        nav = nav->sig;
+    }
+    // no se econtro el nodo
+    if(nav == nullptr)
+        return false;
+    // en el caso de sea el primer nodo o el unico nodo de la lista
+    if((*lista)->id == id){
+        *lista = nav->sig;
+        /*if(*lista == nullptr) TODO este codigo provoca una violacion de segmento en memoria
+            (*lista)->ant = nullptr;*/
+    } else {
+        // en el caso de sea otro nodo
+        Nodo * aux = nav->ant;
+        aux->sig = nav->sig;
+        if(aux->sig != nullptr){
+            aux->sig->ant = aux;
+        }
+    }
+    // elimina la memoria de un apuntador (su valor)
+    delete nav;
+    return true;
+}
+
+/**
+ * Borra todos los elementos de la lista
+ * @param lista = apuntador de lista borra por completo
+ */
+void borrarLista(Nodo ** lista){
+    if(*lista != nullptr){
+        borrarNodo(lista,(*lista)->id);
+        borrarLista(lista);
+    }
+}
+
+/**
+ * Pone los elementos de una segunda lista en la primera considerando los ids
+ * @param lista = lista donde se van a poner los elementos
+ * @param nav = lista donde extraen los elementos
+ */
+void unirListas(Nodo ** lista, Nodo * nav){
+    // recorremos la segunda lista y lo agregamos a la primera
+    while(nav != nullptr){
+        Videojuego vg = nav->vg;
+        Nodo * nodoCreado = crearNodo(nav->id,vg.genero,vg.titulo,vg.clasificacion);
+        if(!insertarNodo(lista,nodoCreado)){
+            cout << "No fue posible insertar el nodo con id " << nav->id << endl;
+        }
+        nav = nav->sig;
+    }
+}
